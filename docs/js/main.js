@@ -82,7 +82,7 @@ function renderTable() {
       <td>${s.ma10.toFixed(2)}</td>
       <td>${s.ma20.toFixed(2)}</td>
       <td>${s.ma60.toFixed(2)}</td>
-      <td>${s.ma120.toFixed(2)}</td>
+      <td>${s.ma120 != null ? s.ma120.toFixed(2) : '-'}</td>
       <td>${s.deviation_max.toFixed(2)}%</td>
     `;
     tbody.appendChild(tr);
@@ -183,7 +183,7 @@ function renderChart(detail, timeframe) {
 
   maConfigs.forEach(m => {
     const values = data[m.key];
-    if (values && values.some(v => v !== null)) {
+    if (values && Array.isArray(values) && values.some(v => v != null)) {
       series.push({
         name: m.label, type: 'line', data: values,
         smooth: true, lineStyle: { width: 1.5, color: m.color },
