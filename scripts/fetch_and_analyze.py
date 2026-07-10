@@ -504,11 +504,13 @@ def check_filter(ma_df):
     for i, j in adjacent_pairs:
         if values[j] <= 0:
             return False
-        if abs(values[i] - values[j]) / values[j] >= 0.20:
+        if abs(values[i] - values[j]) / values[j] >= 0.15:
             return False
     for c in cols:
         if latest[c] <= prev[c]:
             return False
+    if ma_df['Volume'].iloc[-2] <= 1000000:
+        return False
     return True
 
 def calc_max_deviation(latest):
