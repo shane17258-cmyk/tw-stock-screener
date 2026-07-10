@@ -492,8 +492,10 @@ def check_filter(ma_df):
     if len(ma_df) < 70:
         return False
     cols = ['MA5', 'MA10', 'MA20', 'MA60', 'MA120']
-    latest = ma_df.iloc[-1]
-    prev = ma_df.iloc[-2]
+    if len(ma_df) < 3:
+        return False
+    latest = ma_df.iloc[-2]
+    prev = ma_df.iloc[-3]
     for c in cols:
         if pd.isna(latest[c]) or pd.isna(prev[c]):
             return False
@@ -509,7 +511,7 @@ def check_filter(ma_df):
     for c in cols:
         if latest[c] <= prev[c]:
             return False
-    if ma_df['Volume'].iloc[-2] <= 1000000:
+    if latest['Volume'] <= 1000000:
         return False
     return True
 
@@ -568,7 +570,7 @@ def process_stock(symbol, name, df):
         return None
     result = {'symbol': symbol, 'name': name, 'monthly_pass': monthly_pass, 'weekly_pass': weekly_pass, '_df': df}
     if monthly_pass:
-        latest = m_monthly.iloc[-1]
+        latest = m_monthly.iloc[-2]
         result['monthly'] = {
             'close': round(float(latest['Close']), 2),
             'ma5': round(float(latest['MA5']), 2),
@@ -580,7 +582,7 @@ def process_stock(symbol, name, df):
         }
         result['_monthly_data'] = format_chart_data(monthly, m_monthly)
     if weekly_pass:
-        latest = m_weekly.iloc[-1]
+        latest = m_weekly.iloc[-2]
         result['weekly'] = {
             'close': round(float(latest['Close']), 2),
             'ma5': round(float(latest['MA5']), 2),
