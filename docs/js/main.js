@@ -8,9 +8,9 @@ const state = {
 
 const COLORS = {
   MA5: '#FF6B6B', MA10: '#FFD93D', MA20: '#6BCB77',
-  MA60: '#4D96FF', MA120: '#9B59B6'
+  MA60: '#4D96FF'
 };
-const MA_LABELS = { ma5: 'MA5', ma10: 'MA10', ma20: 'MA20', ma60: 'MA60', ma120: 'MA120' };
+const MA_LABELS = { ma5: 'MA5', ma10: 'MA10', ma20: 'MA20', ma60: 'MA60' };
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -82,7 +82,6 @@ function renderTable() {
       <td>${s.ma10.toFixed(2)}</td>
       <td>${s.ma20.toFixed(2)}</td>
       <td>${s.ma60.toFixed(2)}</td>
-      <td>${s.ma120.toFixed(2)}</td>
       <td>${s.deviation_max.toFixed(2)}%</td>
     `;
     tbody.appendChild(tr);
@@ -177,8 +176,7 @@ function renderChart(detail, timeframe) {
     { key: 'ma5', label: 'MA5', color: COLORS.MA5 },
     { key: 'ma10', label: 'MA10', color: COLORS.MA10 },
     { key: 'ma20', label: 'MA20', color: COLORS.MA20 },
-    { key: 'ma60', label: 'MA60', color: COLORS.MA60 },
-    { key: 'ma120', label: 'MA120', color: COLORS.MA120 }
+    { key: 'ma60', label: 'MA60', color: COLORS.MA60 }
   ];
 
   maConfigs.forEach(m => {

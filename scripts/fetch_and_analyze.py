@@ -23,8 +23,8 @@ os.makedirs(CACHE_DIR, exist_ok=True)
 
 MAX_WORKERS = 5
 MIN_TRADING_DAYS = 500
-MA_PERIODS = [5, 10, 20, 60, 120]
-COLORS = {'MA5': '#FF6B6B', 'MA10': '#FFD93D', 'MA20': '#6BCB77', 'MA60': '#4D96FF', 'MA120': '#9B59B6'}
+MA_PERIODS = [5, 10, 20, 60]
+COLORS = {'MA5': '#FF6B6B', 'MA10': '#FFD93D', 'MA20': '#6BCB77', 'MA60': '#4D96FF'}
 
 FALLBACK_STOCKS = [
     {"symbol": "1101", "name": "台泥"}, {"symbol": "1102", "name": "亞泥"}, {"symbol": "1201", "name": "味全"},
@@ -466,18 +466,18 @@ def calc_mas(df, periods=MA_PERIODS):
     return ma_df
 
 def check_filter(ma_df):
-    if len(ma_df) < 130:
+    if len(ma_df) < 70:
         return False
-    cols = ['MA5', 'MA10', 'MA20', 'MA60', 'MA120']
+    cols = ['MA5', 'MA10', 'MA20', 'MA60']
     latest = ma_df.iloc[-1]
     prev = ma_df.iloc[-2]
     for c in cols:
         if pd.isna(latest[c]) or pd.isna(prev[c]):
             return False
-    if not (latest['MA5'] > latest['MA10'] > latest['MA20'] > latest['MA60'] > latest['MA120']):
+    if not (latest['MA5'] > latest['MA10'] > latest['MA20'] > latest['MA60']):
         return False
     values = [latest[c] for c in cols]
-    adjacent_pairs = [(0,1), (1,2), (2,3), (3,4)]
+    adjacent_pairs = [(0,1), (1,2), (2,3)]
     for i, j in adjacent_pairs:
         if values[j] <= 0:
             return False
@@ -489,10 +489,10 @@ def check_filter(ma_df):
     return True
 
 def calc_max_deviation(latest):
-    cols = ['MA5', 'MA10', 'MA20', 'MA60', 'MA120']
+    cols = ['MA5', 'MA10', 'MA20', 'MA60']
     values = [latest[c] for c in cols]
     max_dev = 0.0
-    adjacent_pairs = [(0,1), (1,2), (2,3), (3,4)]
+    adjacent_pairs = [(0,1), (1,2), (2,3)]
     for i, j in adjacent_pairs:
         if values[j] > 0:
             dev = abs(values[i] - values[j]) / values[j]
@@ -511,7 +511,6 @@ def format_chart_data(ohlc_df, ma_df, max_points=60):
         'ma10': [round(float(v), 2) if not pd.isna(v) else None for v in ma_df['MA10'].values[-max_points:]],
         'ma20': [round(float(v), 2) if not pd.isna(v) else None for v in ma_df['MA20'].values[-max_points:]],
         'ma60': [round(float(v), 2) if not pd.isna(v) else None for v in ma_df['MA60'].values[-max_points:]],
-        'ma120': [round(float(v), 2) if not pd.isna(v) else None for v in ma_df['MA120'].values[-max_points:]],
     }
 
 def resample_data(df):
@@ -545,7 +544,6 @@ def process_stock(symbol, name, df):
             'ma10': round(float(latest['MA10']), 2),
             'ma20': round(float(latest['MA20']), 2),
             'ma60': round(float(latest['MA60']), 2),
-            'ma120': round(float(latest['MA120']), 2),
             'deviation_max': calc_max_deviation(latest)
         }
         result['_monthly_data'] = format_chart_data(monthly, m_monthly)
@@ -557,7 +555,6 @@ def process_stock(symbol, name, df):
             'ma10': round(float(latest['MA10']), 2),
             'ma20': round(float(latest['MA20']), 2),
             'ma60': round(float(latest['MA60']), 2),
-            'ma120': round(float(latest['MA120']), 2),
             'deviation_max': calc_max_deviation(latest)
         }
         result['_weekly_data'] = format_chart_data(weekly, m_weekly)
