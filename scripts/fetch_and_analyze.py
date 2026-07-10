@@ -442,7 +442,7 @@ def get_stock_list():
             code_str = str(code)
             market = getattr(info, 'market', '')
             name = getattr(info, 'name', '')
-            if market == 'OTC' and code_str.isdigit() and len(code_str) == 4 and code_str not in seen:
+            if market == '上櫃' and code_str.isdigit() and len(code_str) == 4 and code_str not in seen:
                 seen.add(code_str)
                 stocks.append({'symbol': code_str, 'name': name})
                 otc_count += 1
