@@ -1,8 +1,8 @@
 {
-  "update_date": "2026-07-10 15:53:06",
+  "update_date": "2026-07-10 15:58:56",
   "total_analyzed": 1963,
   "monthly_count": 4,
-  "weekly_count": 37,
+  "weekly_count": 36,
   "monthly": [
     {
       "symbol": "1730",
@@ -62,17 +62,6 @@
       "deviation_max": 5.69
     },
     {
-      "symbol": "1608",
-      "name": "華榮",
-      "close": 34.8,
-      "ma5": 34.55,
-      "ma10": 33.91,
-      "ma20": 33.62,
-      "ma60": 31.82,
-      "ma120": 30.83,
-      "deviation_max": 5.65
-    },
-    {
       "symbol": "1612",
       "name": "宏泰",
       "close": 35.1,
@@ -82,6 +71,17 @@
       "ma60": 33.51,
       "ma120": 31.71,
       "deviation_max": 5.68
+    },
+    {
+      "symbol": "1608",
+      "name": "華榮",
+      "close": 34.8,
+      "ma5": 34.55,
+      "ma10": 33.91,
+      "ma20": 33.62,
+      "ma60": 31.82,
+      "ma120": 30.83,
+      "deviation_max": 5.65
     },
     {
       "symbol": "1734",
@@ -445,17 +445,6 @@
       "ma60": 101.86,
       "ma120": 94.38,
       "deviation_max": 10.61
-    },
-    {
-      "symbol": "3303",
-      "name": "岱稜",
-      "close": 55.63,
-      "ma5": 54.49,
-      "ma10": 50.87,
-      "ma20": 47.69,
-      "ma60": 45.42,
-      "ma120": 44.63,
-      "deviation_max": 7.12
     }
   ]
 }
