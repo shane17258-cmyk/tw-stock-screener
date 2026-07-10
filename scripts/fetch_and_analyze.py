@@ -477,12 +477,12 @@ def check_filter(ma_df):
     if not (latest['MA5'] > latest['MA10'] > latest['MA20'] > latest['MA60'] > latest['MA120']):
         return False
     values = [latest[c] for c in cols]
-    for i in range(len(values)):
-        for j in range(i + 1, len(values)):
-            if values[j] <= 0:
-                return False
-            if abs(values[i] - values[j]) / values[j] >= 0.20:
-                return False
+    adjacent_pairs = [(0,1), (1,2), (2,3), (3,4)]
+    for i, j in adjacent_pairs:
+        if values[j] <= 0:
+            return False
+        if abs(values[i] - values[j]) / values[j] >= 0.20:
+            return False
     for c in cols:
         if latest[c] <= prev[c]:
             return False
@@ -492,11 +492,11 @@ def calc_max_deviation(latest):
     cols = ['MA5', 'MA10', 'MA20', 'MA60', 'MA120']
     values = [latest[c] for c in cols]
     max_dev = 0.0
-    for i in range(len(values)):
-        for j in range(i + 1, len(values)):
-            if values[j] > 0:
-                dev = abs(values[i] - values[j]) / values[j]
-                max_dev = max(max_dev, dev)
+    adjacent_pairs = [(0,1), (1,2), (2,3), (3,4)]
+    for i, j in adjacent_pairs:
+        if values[j] > 0:
+            dev = abs(values[i] - values[j]) / values[j]
+            max_dev = max(max_dev, dev)
     return round(max_dev * 100, 2)
 
 def format_chart_data(ohlc_df, ma_df, max_points=60):
