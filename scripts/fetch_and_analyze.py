@@ -11,6 +11,7 @@ import numpy as np
 import yfinance as yf
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
+from twstock.codes import codes as twstock_codes
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -416,23 +417,45 @@ def log(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
 
 def get_stock_list():
+    stocks = []
+    seen = set()
+
+    # 上市股票 (TWSE API)
     try:
         url = "https://openapi.twse.com.tw/v1/opendata/t187ap03_L"
         resp = requests.get(url, timeout=30, headers={'User-Agent': 'Mozilla/5.0'})
         data = resp.json()
-        stocks = []
-        seen = set()
         for item in data:
             code = str(item.get('公司代號', '')).strip()
             name = str(item.get('公司簡稱', '')).strip()
             if code.isdigit() and len(code) == 4 and code not in seen:
                 seen.add(code)
                 stocks.append({'symbol': code, 'name': name})
-        log(f"從TWSE API取得 {len(stocks)} 檔股票")
-        return stocks
+        log(f"上市: {len([s for s in stocks if len(s['symbol'])==4 and s['symbol'][0] in '1234'])} 檔")
     except Exception as e:
-        log(f"TWSE API失敗 ({e})，使用內建清單")
-        return FALLBACK_STOCKS
+        log(f"TWSE API失敗: {e}")
+
+    # 上櫃股票 (twstock)
+    try:
+        otc_count = 0
+        for code, info in twstock_codes.items():
+            code_str = str(code)
+            market = getattr(info, 'market', '')
+            name = getattr(info, 'name', '')
+            if market == 'OTC' and code_str.isdigit() and len(code_str) == 4 and code_str not in seen:
+                seen.add(code_str)
+                stocks.append({'symbol': code_str, 'name': name})
+                otc_count += 1
+        log(f"上櫃: {otc_count} 檔")
+    except Exception as e:
+        log(f"twstock 讀取上櫃清單失敗: {e}")
+
+    if stocks:
+        log(f"總共 {len(stocks)} 檔股票 (上市+上櫃)")
+        return stocks
+
+    log("使用內建清單")
+    return FALLBACK_STOCKS
 
 def download_stock(symbol):
     cache_path = os.path.join(CACHE_DIR, f"{symbol}.parquet")
