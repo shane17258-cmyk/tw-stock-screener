@@ -638,11 +638,6 @@ def main():
         'monthly': monthly_results,
         'weekly': weekly_results
     }
-    for r in detail_stocks:
-        r.pop('_df', None)
-        r.pop('_daily_data', None)
-        r.pop('_monthly_data', None)
-        r.pop('_weekly_data', None)
     with open(os.path.join(OUTPUT_DIR, 'summary.json'), 'w', encoding='utf-8') as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
     log(f"摘要已儲存: 月線 {len(monthly_results)} 檔, 周線 {len(weekly_results)} 檔")
@@ -663,6 +658,10 @@ def main():
             detail['weekly'] = format_chart_data(weekly, calc_mas(weekly))
         with open(os.path.join(DETAIL_DIR, f"{result['symbol']}.json"), 'w', encoding='utf-8') as f:
             json.dump(detail, f, ensure_ascii=False)
+        result.pop('_df', None)
+        result.pop('_daily_data', None)
+        result.pop('_monthly_data', None)
+        result.pop('_weekly_data', None)
 
     log(f"=== 分析完成! 月線符合: {len(monthly_results)}, 周線符合: {len(weekly_results)} ===")
 
