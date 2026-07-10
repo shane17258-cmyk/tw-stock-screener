@@ -542,7 +542,12 @@ def resample_data(df):
         df_idx = df_idx.tz_localize(None)
     df = df.copy()
     df.index = df_idx
-    monthly = df.resample('M').agg({
+    try:
+        monthly = df.resample('ME').agg({
+            'Open': 'first', 'High': 'max', 'Low': 'min', 'Close': 'last', 'Volume': 'sum'
+        }).dropna()
+    except ValueError:
+        monthly = df.resample('M').agg({
         'Open': 'first', 'High': 'max', 'Low': 'min', 'Close': 'last', 'Volume': 'sum'
     }).dropna()
     weekly = df.resample('W-FRI').agg({
