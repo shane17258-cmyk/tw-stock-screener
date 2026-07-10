@@ -30,6 +30,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Stock Analyzer Bot"
-          git add docs/data/ .cache/
+          git add docs/data/
           git diff --quiet && git diff --staged --quiet || git commit -m "🤖 自動更新台股選股數據 $(date '+%Y-%m-%d')"
           git push
