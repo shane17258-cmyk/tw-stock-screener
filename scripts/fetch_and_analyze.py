@@ -24,8 +24,8 @@ os.makedirs(CACHE_DIR, exist_ok=True)
 
 MAX_WORKERS = 5
 MIN_TRADING_DAYS = 500
-MA_PERIODS = [5, 10, 20, 60]
-COLORS = {'MA5': '#FF6B6B', 'MA10': '#FFD93D', 'MA20': '#6BCB77', 'MA60': '#4D96FF'}
+MA_PERIODS = [5, 10, 20, 60, 120]
+COLORS = {'MA5': '#FF6B6B', 'MA10': '#FFD93D', 'MA20': '#6BCB77', 'MA60': '#4D96FF', 'MA120': '#9B59B6'}
 
 FALLBACK_STOCKS = [
     {"symbol": "1101", "name": "台泥"}, {"symbol": "1102", "name": "亞泥"}, {"symbol": "1201", "name": "味全"},
@@ -491,16 +491,16 @@ def calc_mas(df, periods=MA_PERIODS):
 def check_filter(ma_df):
     if len(ma_df) < 70:
         return False
-    cols = ['MA5', 'MA10', 'MA20', 'MA60']
+    cols = ['MA5', 'MA10', 'MA20', 'MA60', 'MA120']
     latest = ma_df.iloc[-1]
     prev = ma_df.iloc[-2]
     for c in cols:
         if pd.isna(latest[c]) or pd.isna(prev[c]):
             return False
-    if not (latest['MA5'] > latest['MA10'] > latest['MA20'] > latest['MA60']):
+    if not (latest['MA5'] > latest['MA10'] > latest['MA20'] > latest['MA60'] > latest['MA120']):
         return False
     values = [latest[c] for c in cols]
-    adjacent_pairs = [(0,1), (1,2), (2,3)]
+    adjacent_pairs = [(0,1), (1,2), (2,3), (3,4)]
     for i, j in adjacent_pairs:
         if values[j] <= 0:
             return False
@@ -512,10 +512,10 @@ def check_filter(ma_df):
     return True
 
 def calc_max_deviation(latest):
-    cols = ['MA5', 'MA10', 'MA20', 'MA60']
+    cols = ['MA5', 'MA10', 'MA20', 'MA60', 'MA120']
     values = [latest[c] for c in cols]
     max_dev = 0.0
-    adjacent_pairs = [(0,1), (1,2), (2,3)]
+    adjacent_pairs = [(0,1), (1,2), (2,3), (3,4)]
     for i, j in adjacent_pairs:
         if values[j] > 0:
             dev = abs(values[i] - values[j]) / values[j]
