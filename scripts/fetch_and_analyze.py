@@ -566,6 +566,9 @@ def process_stock(symbol, name, df):
     m_weekly = calc_mas(weekly)
     monthly_pass = check_filter(m_monthly)
     weekly_pass = check_filter(m_weekly)
+    vol_10d = df['Volume'].tail(10).mean()
+    if vol_10d <= 100000:
+        return None
     if not monthly_pass and not weekly_pass:
         return None
     result = {'symbol': symbol, 'name': name, 'monthly_pass': monthly_pass, 'weekly_pass': weekly_pass, '_df': df}
