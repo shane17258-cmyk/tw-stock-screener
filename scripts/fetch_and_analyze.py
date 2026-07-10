@@ -481,7 +481,7 @@ def check_filter(ma_df):
         for j in range(i + 1, len(values)):
             if values[j] <= 0:
                 return False
-            if abs(values[i] - values[j]) / values[j] >= 0.10:
+            if abs(values[i] - values[j]) / values[j] >= 0.20:
                 return False
     for c in cols:
         if latest[c] <= prev[c]:
