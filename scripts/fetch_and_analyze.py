@@ -534,6 +534,7 @@ def format_chart_data(ohlc_df, ma_df, max_points=60):
         'ma10': [round(float(v), 2) if not pd.isna(v) else None for v in ma_df['MA10'].values[-max_points:]],
         'ma20': [round(float(v), 2) if not pd.isna(v) else None for v in ma_df['MA20'].values[-max_points:]],
         'ma60': [round(float(v), 2) if not pd.isna(v) else None for v in ma_df['MA60'].values[-max_points:]],
+        'ma120': [round(float(v), 2) if not pd.isna(v) else None for v in ma_df['MA120'].values[-max_points:]],
     }
 
 def resample_data(df):
@@ -572,6 +573,7 @@ def process_stock(symbol, name, df):
             'ma10': round(float(latest['MA10']), 2),
             'ma20': round(float(latest['MA20']), 2),
             'ma60': round(float(latest['MA60']), 2),
+            'ma120': round(float(latest['MA120']), 2),
             'deviation_max': calc_max_deviation(latest)
         }
         result['_monthly_data'] = format_chart_data(monthly, m_monthly)
@@ -583,6 +585,7 @@ def process_stock(symbol, name, df):
             'ma10': round(float(latest['MA10']), 2),
             'ma20': round(float(latest['MA20']), 2),
             'ma60': round(float(latest['MA60']), 2),
+            'ma120': round(float(latest['MA120']), 2),
             'deviation_max': calc_max_deviation(latest)
         }
         result['_weekly_data'] = format_chart_data(weekly, m_weekly)
