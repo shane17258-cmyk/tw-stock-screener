@@ -1,5 +1,5 @@
 {
-  "update_date": "2026-08-05 04:42:43",
+  "update_date": "2026-08-06 04:43:06",
   "total_analyzed": 1966,
   "monthly_count": 4,
   "weekly_count": 30,
@@ -167,9 +167,9 @@
       "ma5": 22.8,
       "ma10": 21.84,
       "ma20": 20.74,
-      "ma60": 19.32,
-      "ma120": 17.4,
-      "deviation_max": 11.05
+      "ma60": 19.33,
+      "ma120": 17.41,
+      "deviation_max": 11.02
     },
     {
       "symbol": "2834",
