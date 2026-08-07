@@ -1,8 +1,8 @@
 {
-  "update_date": "2026-08-06 04:43:06",
+  "update_date": "2026-08-07 04:10:35",
   "total_analyzed": 1966,
   "monthly_count": 4,
-  "weekly_count": 30,
+  "weekly_count": 29,
   "monthly": [
     {
       "symbol": "2908",
@@ -368,17 +368,6 @@
       "ma60": 103.66,
       "ma120": 96.08,
       "deviation_max": 11.02
-    },
-    {
-      "symbol": "3303",
-      "name": "岱稜",
-      "close": 55.0,
-      "ma5": 54.37,
-      "ma10": 53.55,
-      "ma20": 49.52,
-      "ma60": 45.97,
-      "ma120": 45.49,
-      "deviation_max": 8.15
     }
   ]
 }
