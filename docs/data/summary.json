@@ -1,7 +1,7 @@
 {
-  "update_date": "2026-08-27 11:47:10",
+  "update_date": "2026-08-28 13:09:54",
   "total_analyzed": 1968,
-  "monthly_count": 4,
+  "monthly_count": 5,
   "weekly_count": 32,
   "monthly": [
     {
@@ -47,6 +47,17 @@
       "ma60": 405.95,
       "ma120": 363.67,
       "deviation_max": 11.63
+    },
+    {
+      "symbol": "9912",
+      "name": "偉聯",
+      "close": 12.8,
+      "ma5": 12.58,
+      "ma10": 12.32,
+      "ma20": 12.19,
+      "ma60": 11.14,
+      "ma120": 9.74,
+      "deviation_max": 14.39
     }
   ],
   "weekly": [
