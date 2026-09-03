@@ -1,5 +1,5 @@
 {
-  "update_date": "2026-09-02 06:11:04",
+  "update_date": "2026-09-03 06:09:27",
   "total_analyzed": 1967,
   "monthly_count": 5,
   "weekly_count": 29,
@@ -282,17 +282,6 @@
       "deviation_max": 8.69
     },
     {
-      "symbol": "2892",
-      "name": "第一金",
-      "close": 34.4,
-      "ma5": 34.2,
-      "ma10": 33.18,
-      "ma20": 30.68,
-      "ma60": 28.75,
-      "ma120": 26.68,
-      "deviation_max": 8.16
-    },
-    {
       "symbol": "2897",
       "name": "王道銀行",
       "close": 10.35,
@@ -302,6 +291,17 @@
       "ma60": 9.16,
       "ma120": 9.02,
       "deviation_max": 7.92
+    },
+    {
+      "symbol": "2892",
+      "name": "第一金",
+      "close": 34.4,
+      "ma5": 34.2,
+      "ma10": 33.18,
+      "ma20": 30.68,
+      "ma60": 28.75,
+      "ma120": 26.68,
+      "deviation_max": 8.16
     },
     {
       "symbol": "2908",
