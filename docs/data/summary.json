@@ -1,5 +1,5 @@
 {
-  "update_date": "2026-09-07 06:25:04",
+  "update_date": "2026-09-08 06:14:44",
   "total_analyzed": 1967,
   "monthly_count": 5,
   "weekly_count": 30,
@@ -337,17 +337,6 @@
       "deviation_max": 8.34
     },
     {
-      "symbol": "5876",
-      "name": "上海商銀",
-      "close": 46.3,
-      "ma5": 43.88,
-      "ma10": 43.25,
-      "ma20": 40.94,
-      "ma60": 39.61,
-      "ma120": 39.42,
-      "deviation_max": 5.65
-    },
-    {
       "symbol": "5607",
       "name": "遠雄港",
       "close": 56.8,
@@ -357,6 +346,17 @@
       "ma60": 47.77,
       "ma120": 44.55,
       "deviation_max": 7.21
+    },
+    {
+      "symbol": "5876",
+      "name": "上海商銀",
+      "close": 46.3,
+      "ma5": 43.88,
+      "ma10": 43.25,
+      "ma20": 40.94,
+      "ma60": 39.61,
+      "ma120": 39.42,
+      "deviation_max": 5.65
     },
     {
       "symbol": "5880",
