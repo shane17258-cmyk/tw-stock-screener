@@ -1,7 +1,7 @@
 {
-  "update_date": "2026-10-01 07:30:36",
+  "update_date": "2026-10-02 07:17:46",
   "total_analyzed": 1968,
-  "monthly_count": 3,
+  "monthly_count": 4,
   "weekly_count": 21,
   "monthly": [
     {
@@ -14,6 +14,17 @@
       "ma60": 11.88,
       "ma120": 10.59,
       "deviation_max": 14.82
+    },
+    {
+      "symbol": "2323",
+      "name": "中環",
+      "close": 11.02,
+      "ma5": 10.78,
+      "ma10": 10.76,
+      "ma20": 9.67,
+      "ma60": 9.59,
+      "ma120": 8.4,
+      "deviation_max": 14.16
     },
     {
       "symbol": "2908",
