@@ -1,8 +1,8 @@
 {
-  "update_date": "2026-10-06 07:52:20",
+  "update_date": "2026-10-07 07:31:43",
   "total_analyzed": 1968,
   "monthly_count": 4,
-  "weekly_count": 28,
+  "weekly_count": 29,
   "monthly": [
     {
       "symbol": "1459",
@@ -227,17 +227,6 @@
       "deviation_max": 12.24
     },
     {
-      "symbol": "2886",
-      "name": "兆豐金",
-      "close": 48.85,
-      "ma5": 50.16,
-      "ma10": 49.36,
-      "ma20": 46.14,
-      "ma60": 41.32,
-      "ma120": 38.94,
-      "deviation_max": 11.66
-    },
-    {
       "symbol": "2889",
       "name": "國票金",
       "close": 16.1,
@@ -247,6 +236,17 @@
       "ma60": 15.17,
       "ma120": 14.18,
       "deviation_max": 6.96
+    },
+    {
+      "symbol": "2886",
+      "name": "兆豐金",
+      "close": 48.85,
+      "ma5": 50.16,
+      "ma10": 49.36,
+      "ma20": 46.14,
+      "ma60": 41.32,
+      "ma120": 38.94,
+      "deviation_max": 11.66
     },
     {
       "symbol": "2897",
@@ -357,6 +357,17 @@
       "ma60": 12.91,
       "ma120": 12.88,
       "deviation_max": 9.32
+    },
+    {
+      "symbol": "6122",
+      "name": "擎邦",
+      "close": 63.9,
+      "ma5": 55.08,
+      "ma10": 51.31,
+      "ma20": 48.36,
+      "ma60": 46.52,
+      "ma120": 45.53,
+      "deviation_max": 7.36
     }
   ]
 }
