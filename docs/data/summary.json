@@ -1,5 +1,5 @@
 {
-  "update_date": "2026-10-08 07:47:49",
+  "update_date": "2026-10-09 07:44:43",
   "total_analyzed": 1968,
   "monthly_count": 4,
   "weekly_count": 28,
@@ -128,17 +128,6 @@
       "deviation_max": 5.9
     },
     {
-      "symbol": "2605",
-      "name": "新興",
-      "close": 35.75,
-      "ma5": 36.14,
-      "ma10": 34.88,
-      "ma20": 32.63,
-      "ma60": 29.18,
-      "ma120": 26.39,
-      "deviation_max": 11.83
-    },
-    {
       "symbol": "2603",
       "name": "長榮",
       "close": 240.0,
@@ -148,6 +137,17 @@
       "ma60": 190.41,
       "ma120": 180.24,
       "deviation_max": 12.9
+    },
+    {
+      "symbol": "2605",
+      "name": "新興",
+      "close": 35.75,
+      "ma5": 36.14,
+      "ma10": 34.88,
+      "ma20": 32.63,
+      "ma60": 29.18,
+      "ma120": 26.39,
+      "deviation_max": 11.83
     },
     {
       "symbol": "2606",
