@@ -1,5 +1,5 @@
 {
-  "update_date": "2026-10-14 06:29:04",
+  "update_date": "2026-10-15 06:11:40",
   "total_analyzed": 1968,
   "monthly_count": 4,
   "weekly_count": 20,
@@ -238,17 +238,6 @@
       "deviation_max": 9.02
     },
     {
-      "symbol": "6136",
-      "name": "富爾特",
-      "close": 26.6,
-      "ma5": 25.28,
-      "ma10": 25.09,
-      "ma20": 24.69,
-      "ma60": 23.57,
-      "ma120": 22.37,
-      "deviation_max": 5.35
-    },
-    {
       "symbol": "6133",
       "name": "金橋",
       "close": 27.05,
@@ -258,6 +247,17 @@
       "ma60": 20.66,
       "ma120": 19.04,
       "deviation_max": 11.47
+    },
+    {
+      "symbol": "6136",
+      "name": "富爾特",
+      "close": 26.6,
+      "ma5": 25.28,
+      "ma10": 25.09,
+      "ma20": 24.69,
+      "ma60": 23.57,
+      "ma120": 22.37,
+      "deviation_max": 5.35
     },
     {
       "symbol": "6152",
