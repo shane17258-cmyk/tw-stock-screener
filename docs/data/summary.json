@@ -1,7 +1,7 @@
 {
-  "update_date": "2026-10-19 06:31:25",
+  "update_date": "2026-10-20 06:19:25",
   "total_analyzed": 1968,
-  "monthly_count": 4,
+  "monthly_count": 5,
   "weekly_count": 29,
   "monthly": [
     {
@@ -38,6 +38,17 @@
       "deviation_max": 12.84
     },
     {
+      "symbol": "8462",
+      "name": "柏文",
+      "close": 158.5,
+      "ma5": 154.09,
+      "ma10": 145.61,
+      "ma20": 139.9,
+      "ma60": 122.62,
+      "ma120": 117.45,
+      "deviation_max": 14.1
+    },
+    {
       "symbol": "9908",
       "name": "大台北",
       "close": 29.0,
@@ -51,17 +62,6 @@
   ],
   "weekly": [
     {
-      "symbol": "1313",
-      "name": "聯成",
-      "close": 13.05,
-      "ma5": 12.58,
-      "ma10": 12.23,
-      "ma20": 12.06,
-      "ma60": 11.2,
-      "ma120": 10.49,
-      "deviation_max": 7.72
-    },
-    {
       "symbol": "1312",
       "name": "國喬",
       "close": 16.15,
@@ -71,6 +71,17 @@
       "ma60": 12.34,
       "ma120": 12.0,
       "deviation_max": 11.44
+    },
+    {
+      "symbol": "1313",
+      "name": "聯成",
+      "close": 13.05,
+      "ma5": 12.58,
+      "ma10": 12.23,
+      "ma20": 12.06,
+      "ma60": 11.2,
+      "ma120": 10.49,
+      "deviation_max": 7.72
     },
     {
       "symbol": "1459",
