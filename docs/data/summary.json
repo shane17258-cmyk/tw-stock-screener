@@ -1,5 +1,5 @@
 {
-  "update_date": "2026-10-22 06:22:26",
+  "update_date": "2026-10-23 06:17:06",
   "total_analyzed": 1969,
   "monthly_count": 5,
   "weekly_count": 29,
@@ -106,17 +106,6 @@
       "deviation_max": 4.24
     },
     {
-      "symbol": "2006",
-      "name": "東和鋼鐵",
-      "close": 92.1,
-      "ma5": 87.88,
-      "ma10": 84.66,
-      "ma20": 78.3,
-      "ma60": 68.8,
-      "ma120": 66.48,
-      "deviation_max": 13.82
-    },
-    {
       "symbol": "2010",
       "name": "春源",
       "close": 23.45,
@@ -126,6 +115,17 @@
       "ma60": 20.71,
       "ma120": 18.55,
       "deviation_max": 11.63
+    },
+    {
+      "symbol": "2006",
+      "name": "東和鋼鐵",
+      "close": 92.1,
+      "ma5": 87.88,
+      "ma10": 84.66,
+      "ma20": 78.3,
+      "ma60": 68.8,
+      "ma120": 66.48,
+      "deviation_max": 13.82
     },
     {
       "symbol": "2032",
