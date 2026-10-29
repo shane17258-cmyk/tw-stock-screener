@@ -1,5 +1,5 @@
 {
-  "update_date": "2026-10-28 07:05:35",
+  "update_date": "2026-10-29 07:27:41",
   "total_analyzed": 1970,
   "monthly_count": 5,
   "weekly_count": 20,
@@ -150,17 +150,6 @@
       "deviation_max": 12.66
     },
     {
-      "symbol": "2886",
-      "name": "兆豐金",
-      "close": 55.2,
-      "ma5": 51.33,
-      "ma10": 50.41,
-      "ma20": 48.17,
-      "ma60": 41.96,
-      "ma120": 39.4,
-      "deviation_max": 14.8
-    },
-    {
       "symbol": "2727",
       "name": "王品",
       "close": 245.5,
@@ -170,6 +159,17 @@
       "ma60": 215.77,
       "ma120": 208.63,
       "deviation_max": 7.46
+    },
+    {
+      "symbol": "2886",
+      "name": "兆豐金",
+      "close": 55.2,
+      "ma5": 51.33,
+      "ma10": 50.41,
+      "ma20": 48.17,
+      "ma60": 41.96,
+      "ma120": 39.4,
+      "deviation_max": 14.8
     },
     {
       "symbol": "3010",
