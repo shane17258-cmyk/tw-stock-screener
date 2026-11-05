@@ -1,8 +1,8 @@
 {
-  "update_date": "2026-11-04 07:47:35",
+  "update_date": "2026-11-05 08:11:01",
   "total_analyzed": 1971,
-  "monthly_count": 6,
-  "weekly_count": 19,
+  "monthly_count": 4,
+  "weekly_count": 17,
   "monthly": [
     {
       "symbol": "2849",
@@ -47,28 +47,6 @@
       "ma60": 28.27,
       "ma120": 25.28,
       "deviation_max": 11.84
-    },
-    {
-      "symbol": "4105",
-      "name": "東洋",
-      "close": 79.9,
-      "ma5": 77.26,
-      "ma10": 76.67,
-      "ma20": 74.93,
-      "ma60": 67.56,
-      "ma120": 62.55,
-      "deviation_max": 10.92
-    },
-    {
-      "symbol": "4716",
-      "name": "大立",
-      "close": 19.0,
-      "ma5": 19.1,
-      "ma10": 16.9,
-      "ma20": 16.31,
-      "ma60": 15.09,
-      "ma120": 13.96,
-      "deviation_max": 13.02
     }
   ],
   "weekly": [
@@ -258,28 +236,6 @@
       "ma60": 34.01,
       "ma120": 33.06,
       "deviation_max": 7.99
-    },
-    {
-      "symbol": "4105",
-      "name": "東洋",
-      "close": 79.9,
-      "ma5": 80.7,
-      "ma10": 79.25,
-      "ma20": 77.8,
-      "ma60": 76.56,
-      "ma120": 72.58,
-      "deviation_max": 5.48
-    },
-    {
-      "symbol": "4706",
-      "name": "大恭",
-      "close": 49.3,
-      "ma5": 43.36,
-      "ma10": 38.87,
-      "ma20": 35.59,
-      "ma60": 31.55,
-      "ma120": 30.65,
-      "deviation_max": 12.83
     }
   ]
 }
