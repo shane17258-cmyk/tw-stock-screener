@@ -1,8 +1,8 @@
 {
-  "update_date": "2026-11-16 08:17:20",
+  "update_date": "2026-11-17 09:31:54",
   "total_analyzed": 1971,
-  "monthly_count": 5,
-  "weekly_count": 17,
+  "monthly_count": 4,
+  "weekly_count": 16,
   "monthly": [
     {
       "symbol": "2849",
@@ -47,17 +47,6 @@
       "ma60": 28.27,
       "ma120": 25.28,
       "deviation_max": 11.84
-    },
-    {
-      "symbol": "4105",
-      "name": "東洋",
-      "close": 79.9,
-      "ma5": 77.26,
-      "ma10": 76.67,
-      "ma20": 74.93,
-      "ma60": 67.56,
-      "ma120": 62.55,
-      "deviation_max": 10.92
     }
   ],
   "weekly": [
@@ -236,17 +225,6 @@
       "ma60": 34.19,
       "ma120": 33.11,
       "deviation_max": 7.46
-    },
-    {
-      "symbol": "4105",
-      "name": "東洋",
-      "close": 84.1,
-      "ma5": 81.4,
-      "ma10": 80.1,
-      "ma20": 78.56,
-      "ma60": 76.85,
-      "ma120": 72.8,
-      "deviation_max": 5.56
     }
   ]
 }
