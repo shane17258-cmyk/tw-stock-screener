@@ -1,8 +1,8 @@
 {
-  "update_date": "2026-11-26 09:50:45",
+  "update_date": "2026-11-27 09:56:05",
   "total_analyzed": 1970,
   "monthly_count": 5,
-  "weekly_count": 6,
+  "weekly_count": 5,
   "monthly": [
     {
       "symbol": "2849",
@@ -115,17 +115,6 @@
       "ma60": 37.48,
       "ma120": 36.95,
       "deviation_max": 13.46
-    },
-    {
-      "symbol": "5209",
-      "name": "新鼎",
-      "close": 187.0,
-      "ma5": 202.6,
-      "ma10": 189.7,
-      "ma20": 174.15,
-      "ma60": 162.16,
-      "ma120": 149.35,
-      "deviation_max": 8.93
     }
   ]
 }
